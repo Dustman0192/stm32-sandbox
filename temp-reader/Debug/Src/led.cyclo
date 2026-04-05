@@ -1,0 +1,2 @@
+../Src/led.c:7:6:led_init	1
+../Src/led.c:13:6:led_toggle	2

@@ -1,0 +1,5 @@
+../Src/timer.c:11:6:timer_init	1
+../Src/timer.c:18:6:timer_reset	1
+../Src/timer.c:22:6:timer_set_enabled	2
+../Src/timer.c:34:6:timer_get_enabled	1
+../Src/timer.c:38:6:timer_get_overflowed	1
