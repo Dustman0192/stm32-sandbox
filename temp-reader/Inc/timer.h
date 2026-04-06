@@ -8,6 +8,5 @@ void timer_init(void);
 void timer_reset(void);
 void timer_set_enabled(bool);
 bool timer_get_enabled(void);
-bool timer_get_overflowed(void);
 
 #endif

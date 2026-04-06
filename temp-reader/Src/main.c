@@ -3,6 +3,8 @@
 #include "timer.h"
 #include "tmp.h"
 
+void TIM2_IRQHandler(void);
+
 int main(void) {
 
 	//tmp_init();
@@ -12,11 +14,13 @@ int main(void) {
 
 	timer_set_enabled(true);
 	while (true) {
-		if (timer_get_overflowed()) {
-			led_toggle();
-			timer_reset();
-		}
 	}
 
 	return 0;
+}
+
+void TIM2_IRQHandler(void)
+{
+	timer_reset();
+	led_toggle();
 }
