@@ -5,6 +5,7 @@
 #define SR_UIF		(1U<<0)
 
 #define DIER_UIE	(1U<<0)
+#define ISER_TIM2	(1U<<28)
 
 // SYSCLOCK
 #define PRESCALER	1600U
@@ -19,8 +20,10 @@ void timer_init()
 
 	__disable_irq();
 
-	TIM2->DIER |= (1U<<0);
-	NVIC->ISER[0] |= (1U<<28);
+	// Enable TIM2 interrupts in timer
+	TIM2->DIER |= DIER_UIE;
+	// Enable TIM2 interrupt (vector position 28)
+	NVIC->ISER[0] |= ISER_TIM2;
 
 	__enable_irq();
 }
