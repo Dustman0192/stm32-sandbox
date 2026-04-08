@@ -4,6 +4,6 @@
 #include "stm32f4xx.h"
 
 void tmp_init(void);
-float tmp_read(void);
+uint32_t tmp_read_raw(void);
 
 #endif
